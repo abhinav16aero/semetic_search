@@ -37,9 +37,9 @@ async def perform_search(query: str):
     results = search(query)
     return results
 
-@app.get("/js/main.js", response_class=Response)
+@app.get("/src/main.js", response_class=Response)
 async def get_main_js():
-    with open("js/main.js", "r") as file:
+    with open("src/main.js", "r") as file:
         js_content = file.read()
     return Response(content=js_content, media_type="application/javascript")
 
