@@ -13,7 +13,7 @@ app.add_middleware(
     allow_methods=["GET,OPTIONS,PATCH,DELETE,POST,PUT"],
     allow_headers=["X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"],
 )
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory="public")
 
 @app.get("/", response_class=HTMLResponse)
 async def index():
